@@ -1,0 +1,56 @@
+.aboutRight {
+  height: 100vh;
+  width: 100%;
+  padding-top: 10vh;
+  align-items: center;
+}
+.introduceWrapper {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.introducing {
+  text-align: center;
+  justify-content: center;
+  font-size: 500%;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  animation: fade-in 1.5s ease-in-out forwards;
+}
+
+.jobTitle {
+  color: rgb(0, 0, 0);
+  font-size: 180%;
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
+  animation-delay: 0.5s; /* Add delay for the jobTitle div */
+  padding-top: 4vh;
+}
+
+.about {
+  width: 80%;
+  letter-spacing: 2px;
+  line-height: 1.8;
+  text-align: justify;
+  justify-content: left;
+  margin: 10%;
+  font-size: 20px;
+  transition: 2s ease;
+  padding-top: 0.8vh;
+  padding-bottom: 15vh;
+}
+.line {
+  width: 94%;
+  margin-left: 3%;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  border-top: 1px dashed rgba(0, 0, 0, 0.3);
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

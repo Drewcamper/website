@@ -1,0 +1,41 @@
+.menuContainer {
+  position: fixed;
+  width: 24vw;
+  padding-left: 0.5vw;
+  display: flex;
+  flex-direction: row;
+}
+button {
+  background-color: transparent;
+  border: 0px;
+  width: 33.3333%;
+  color: white;
+
+  margin-top: 1vh;
+  height: 5vh;
+  border-radius: 10px;
+  font-size: 120%;
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1000px) {
+  .menuContainer {
+    align-items: center;
+    height: 7vh;
+    width: 100vw;
+    margin-top: 93vh;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  button {
+    height: 7vh;
+    margin-top: 0vh;
+    color: white;
+    border-radius: 0px;
+  }
+  button:hover {
+    color: black;
+    background-color: white;
+  }
+}

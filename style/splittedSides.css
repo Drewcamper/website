@@ -1,0 +1,36 @@
+.appWrapper {
+  display: flex;
+}
+.leftSide {
+  background-color: rgb(149, 141, 186);
+
+  width: 25vw;
+  height: 100vh;
+  position: fixed;
+  align-items: center;
+  text-align: center;
+  visibility: visible;
+}
+.rightSide {
+  width: 75vw;
+  padding-left: 25vw;
+  align-items: center;
+  text-align: center;
+}
+img {
+  margin-top: 30vh;
+  width: 15vw;
+  border-radius: 10%;
+  transition: width 2s ease;
+  animation: fade-in 0.7s ease-in-out forwards;
+}
+@media (max-width: 1000px) {
+
+  .leftSide {
+    visibility: hidden;
+  }
+  .rightSide {
+    width: 100vw;
+    padding-left: 0vw;
+  }
+}
