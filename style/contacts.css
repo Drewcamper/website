@@ -1,0 +1,235 @@
+.contactsRight {
+    height: 100vh;
+    background-color: rgba(149, 141, 186);
+  }
+  
+  .contactsWrapper {
+    width: 50vw;
+    height: 100vh;
+    margin-left: 12.5vw;
+  }
+  .flexBoxContainer {
+    display: flex;
+    width: 100%;
+    padding-top: 19.5vh;
+  }
+  .antiFlexBox {
+    flex-direction: row;
+    width: 100%;
+  }
+  .flexBox {
+    flex-direction: row;
+    width: 24vw;
+  }
+  .field {
+    width: 100%;
+    margin: 2vh 0 2vh 0px;
+  }
+  .form-control {
+    background-color: white;
+    height: 5vh;
+    border-radius: 10px;
+    border: 0px;
+    min-height: 30px;
+    padding-left: 5%;
+  }
+  .leftForm {
+    width: 90%;
+    margin-right: 5%;
+  }
+  .rightForm {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .mailToContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30px;
+    height: 5vh;
+    color: white;
+    border-color: transparent;
+    margin-left: 5%;
+    padding-bottom: 1.5%;
+    width: 95%;
+  }
+  .mailTo {
+    text-align: center;
+    padding-top: 1.5%;
+    margin: 2vh 0 2vh 0px;
+    visibility: visible;
+  }
+  .messageContainer {
+    width: 50vw;
+    min-height: 30vh;
+  }
+  .message-form {
+    background-color: white;
+    min-width: 95%;
+    max-width: 95%;
+    min-height: 24.6vh;
+    max-height: 40vh;
+    height: 100%;
+    margin-top: 1vh;
+    border-radius: 10px;
+    border: 0px;
+    padding: 2.5%;
+  }
+  
+  .btn-info {
+    cursor: pointer;
+    height: 5vh;
+    min-height: 30px;
+    min-width: 50%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bolder;
+    margin-top: 2vh;
+  }
+  
+  .btn-info:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+  }
+  .contactSquare {
+    visibility: hidden;
+  }
+  
+  .tileWrapperRight {
+    display: flex;
+    flex-wrap: wrap;
+    width: 0vw;
+    height: 10vh;
+    margin-top: 0vh;
+    margin-left: 5vw;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgb(75,70,92);
+  
+  }
+  .tileRight {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 90%;
+    border-radius: 0px;
+    color: white;
+    
+  }
+  .tileRight:hover {
+    background-color: rgb(149, 141, 186);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .leftTopRight {
+    border-radius: 10px 0px 0px 0%;
+  
+    font-size: 80%;
+  }
+  .rightTopRight {
+    border-radius: 0px 10px 0px 0px;  
+  
+    font-size: 80%;
+  }
+  .leftBottomRight {
+    border-radius: 0px 0px 0px 10px; 
+    font-size: 80%;
+  }
+  .rightBottomRight {
+    border-radius: 0px 0px 10px 0px;
+    font-size: 80%;
+  }
+  .emailRight {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+  }
+  .phoneRight {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+  }
+  .leftTopRight:hover {
+    border-color: rgba(0,0,0,.5);
+  
+  }
+  .rightTopRight:hover {
+    border-color: rgba(0,0,0,.5);
+  
+  }
+  .leftBottomRight:hover {
+    border-color: rgba(0,0,0,.5);
+  
+  }
+  .rightBottomRight:hover {
+    border-color: rgba(0,0,0,.5);
+  
+  }
+  
+  @media (max-width: 1000px) {
+    .contactsWrapper {
+      width: 96vw;
+      height: 100vh;
+      margin-left: 2vw;
+    }
+    .flexBoxContainer {
+      flex-direction: column;
+      padding-top: 2vh;
+    }
+    .form-control {
+      padding-left: 2%;
+    }
+    .leftForm {
+      width: 98%;
+      margin-right: 0%;
+    }
+    .rightForm {
+      width: 98%;
+      margin-left: 0%;
+    }
+    .field {
+      width: 100%;
+      margin: 0vh 0 2vh 0px;
+    }
+    .mailToContainer {
+      margin-left: 0%;
+      padding-bottom: 2vh;
+      width: 100%;
+    }
+    .mailTo {
+      text-align: center;
+      padding-top: 0vh;
+      margin: 0vh;
+      visibility: hidden;
+    }
+    .messageContainer {
+      width: 100%;
+      padding: 0vh 0vw 5vh 0vw;
+      height: 30vh;
+    }
+    .message-form {
+      max-height: 30vh;
+      max-width: 96%;
+      min-width: 96%;
+      min-height: 30vh;
+      padding: 2%;
+    }
+    .btn-info {
+      margin-top: 5vh;
+      font-size: 100%;
+    }
+    .contactSquare {
+      visibility: visible;
+      margin-top: 7.5vh;
+  
+    }
+    .tileWrapperRight {
+      width: 85vw;
+    }
+    
+  }

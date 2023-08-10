@@ -1,11 +1,11 @@
 import React from "react";
 import { WebsiteProvider } from "./context/context";
 import "./index.css";
-import SplittedSides from "./SplittedSides";
+import Home from "./components/Home";
 function App() {
   return (
     <WebsiteProvider>
-      <SplittedSides />
+      <Home />
     </WebsiteProvider>
   );
 }

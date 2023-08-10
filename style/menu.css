@@ -1,0 +1,20 @@
+
+.menuWrapper {
+    background-color: green;
+    display: flex;
+    position: fixed;
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 5vh;
+  }
+  .menuTitles {
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+    font-size: 140%;
+    cursor: pointer;
+  }
+  .menuTitles:hover{
+    background-color: blue;
+  }
+  

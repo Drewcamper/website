@@ -1,0 +1,7 @@
+.componentWrapper {
+    height: 80vh;
+    width: 95vw;
+    position: fixed;
+    background-color: pink;
+    margin: 15vh 5vh 5vh 5vh;
+  }
