@@ -4,8 +4,7 @@ import "../style/components.css";
 function Projects() {
   return (
     <div className="componentWrapper">
-      <div className="pictureWrapper">
-      </div>
+      <div className="pictureWrapper"></div>
     </div>
   );
 }

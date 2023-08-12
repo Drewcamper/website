@@ -1,20 +1,41 @@
-
 .menuWrapper {
-    background-color: green;
-    display: flex;
-    position: fixed;
-    width: 50vw;
-    margin-left: 25vw;
-    margin-top: 5vh;
+  display: flex;
+  position: fixed;
+  width: 50vw;
+  margin-left: 25vw;
+  margin-top: 2.5vh;
+}
+.menuTitles {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+  font-size: 140%;
+  cursor: pointer;
+  padding: 1vh 1vw 1vh 1vw;
+}
+
+.menuTitles::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.menuTitles.active::before {
+  width: 100%;
+}
+
+.menuTitles:hover::before {
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  .menuWrapper {
+    width: 90vw;
+    margin-left: 5vw;
   }
-  .menuTitles {
-    background-color: transparent;
-    width: 100%;
-    text-align: center;
-    font-size: 140%;
-    cursor: pointer;
-  }
-  .menuTitles:hover{
-    background-color: blue;
-  }
-  
+}

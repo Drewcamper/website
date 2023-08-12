@@ -1,17 +1,8 @@
-// import React from "react";
-
-// function Contacts() {
-//   return <div className="componentWrapper">contacts</div>;
-// }
-
-// export default Contacts;
-
-import React, { forwardRef, useState, useEffect } from "react";
+import React, { forwardRef, useState } from "react";
 import emailjs from "emailjs-com";
 import "../style/components.css";
-import '../style/contacts.css'
+import "../style/contacts.css";
 const Contacts = forwardRef((props, ref) => {
-  const [emailText, setEmailText] = useState("korosiandris@gmail.com");
   const [phoneNumber, setPhoneNumber] = useState("+36 20 368 8363");
   const handlePhoneClick = () => {
     window.location.href = `tel:${phoneNumber}`;
@@ -69,87 +60,87 @@ const Contacts = forwardRef((props, ref) => {
     sendEmail(e);
   }
 
-  return (
-    <div className="componentWrapper">
-      <div ref={ref} id="contacts" className="contactsRight">
-        <div className="contactsWrapper">
-          <form onSubmit={sendEmail}>
-            <div className="flexBoxContainer">
-              <div className="antiFlexBox">
-                <div className="field">
-                  <input
-                    type="text"
-                    className="form-control leftForm"
-                    placeholder="Name"
-                    name="name"
-                    required
-                  />
-                </div>
-                <div className="field">
-                  <input
-                    type="email"
-                    className="form-control leftForm"
-                    placeholder="Email Address"
-                    name="email"
-                    required
-                  />
-                </div>
-              </div>
-              <div className="antiFlexBox">
-                <div className="field">
-                  <input
-                    type="text"
-                    className="form-control rightForm"
-                    placeholder="Subject"
-                    name="subject"
-                    required
-                  />
-                </div>
-                <div className="mailToContainer ">
-                  <div className="mailTo rightForm">mail to: korosiandris@gmail.com</div>
-                </div>
-              </div>
-            </div>
-            <div className="messageContainer">
-              <textarea
-                className="message-form"
-                cols="30"
-                rows="8"
-                placeholder="Your message"
-                name="message"
-                required></textarea>
-            </div>
-
-            <div className="send-button">
-              <button type="submit" className="btn btn-info" onClick={(e) => handleClick(e)}>
-                {buttonText}
-              </button>
-            </div>
-          </form>
-
-          <div className="contactSquare">
-            <div className="tileWrapperRight">
-              <div className="tileRight leftTopRight">
-                <a
-                  href="https://www.linkedin.com/in/andr%C3%A1s-k%C5%91r%C3%B6si-535b27177/"
-                  target="_blank"></a>
-                LinkedIn
-              </div>
-              <div className="tileRight rightTopRight">
-                <a href="https://github.com/Drewcamper" target="_blank"></a>
-                GitHub
-              </div>
-              <div className="tileRight emailRight leftBottomRight" onClick={handlePhoneClick}>
-                {phoneNumber}
-              </div>
-              <a
-                className="tileRight phoneRight rightBottomRight"
-                href="mailto:korosiandris@gmail.com"
-                target="_blank">
-                {emailText}
-              </a>
+  const ContactTiles = () => {
+    return (
+      <div className="contactTileWrapper">
+          <div className="tile">
+            <a
+              href="https://www.linkedin.com/in/andr%C3%A1s-k%C5%91r%C3%B6si-535b27177/"
+              target="_blank">
+              LinkedIn
+            </a>
+          </div>
+          <div className="tile">
+            <a href="https://github.com/Drewcamper" target="_blank">
+              GitHub
+            </a>
+          </div>
+          <div className="tile">
+            <div className="callMe" onClick={handlePhoneClick}>
+              {phoneNumber}
             </div>
           </div>
+          <div className="tile">
+            <a  className="callMe" href="mailto:korosiandris@gmail.com" target="_blank">
+              korosiandris@gmail.com
+            </a>
+          </div>
+      </div>
+    );
+  };
+
+  const SendEmailForm = () => {
+    return (
+      <>
+        <form onSubmit={sendEmail}>
+          <div className="field">
+            <input type="text" className="form-control" placeholder="Name" name="name" required />
+          </div>
+          <div className="field">
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Email Address"
+              name="email"
+              required
+            />
+          </div>
+
+          <div className="field">
+            <input
+              type="text"
+              className="form-control "
+              placeholder="Subject"
+              name="subject"
+              required
+            />
+          </div>
+
+          <div className="messageContainer">
+            <textarea
+              className="message-form"
+              cols="30"
+              rows="8"
+              placeholder="Your message"
+              name="message"
+              required></textarea>
+          </div>
+        </form>
+        <div type="submit" className="sendEmailButton" onClick={(e) => handleClick(e)}>
+          {buttonText}
+        </div>
+      </>
+    );
+  };
+
+  return (
+    <div className="componentWrapper">
+      <div className="contactWrapper">
+        <div className="emailWrapper">
+          <SendEmailForm />
+        </div>
+        <div className="linkWrapper">
+          <ContactTiles />
         </div>
       </div>
     </div>
