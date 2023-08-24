@@ -4,8 +4,9 @@
 }
 .emailWrapper {
   width: 60%;
-  height: 75vh;
+  /* height: 75vh; */
   padding: 5vh 5% 5vh 5%;
+  /* background-color: cornflowerblue; */
 }
 .linkWrapper {
   width: 20%;
@@ -13,7 +14,7 @@
   padding-top: 5vh;
   padding-left: 5%;
   padding-right: 5%;
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
 }
 .flexBoxContainer {
   display: flex;
@@ -22,15 +23,17 @@
 .field {
   width: 100%;
   margin: 2vh 0 2vh 0px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 .form-control {
-  background-color: white;
+  /* background-color: rgb(216, 216, 216); */
   height: 5vh;
   border-radius: 10px;
   border: 0px;
   min-height: 30px;
   padding-left: 2.5%;
-  width: 97.5%;
+  width: calc(97.5% - 2px);
   top: 50px;
 }
 
@@ -47,102 +50,76 @@
   padding: 2.5%;
   text-align: left;
   resize: none;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .sendEmailButton {
   cursor: pointer;
-  /* height: 5vh; */
   margin: auto;
   padding: 1.25vh 0px 1.25vh 0px;
   border-radius: 10px;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   font-weight: bolder;
   margin-top: 10vh;
   text-align: center;
   width: 50%;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+
+  color: black;
 }
 
 .sendEmailButton:hover {
-  background-color: white;
-  color: cornflowerblue;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: black;
 }
 
 .contactTileWrapper {
-  /* background-color: red; */
   height: 75vh;
   display: flex;
-  flex-direction: column; /* Stack the rows vertically */
-  align-items: center; /* Center the rows horizontally */
-}
-
-/* .tile {
-  width: 90%;
-  margin: 2vh;
+  flex-direction: column;
   align-items: center;
-  color: white;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 10px;
-}
-.tile:hover {
-  border-color: white;
 }
 
-.callMe {
-  cursor: pointer;
-  padding: 2vh;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  padding: 2vh;
-} */
 .tile {
   width: 90%;
   margin: 2vh;
   align-items: center;
-  color: white;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 10px;
 }
 
 .tile:hover {
-  border-color: white;
+  border-color: black;
 }
 
 .callMe {
   cursor: pointer;
   padding: 2vh;
-  display: block; /* Display the <a> tag as a block-level element */
+  display: block;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
   cursor: pointer;
   padding: 2vh;
-  display: block; /* Display the <a> tag as a block-level element */
+  display: block;
 }
 
 a:visited {
-  color: white;
+  color: black;
 }
 
 a:active {
-  color: white;
+  color: black;
 }
 
 @media (max-width: 1000px) {
-  .contactsWrapper {
-    width: 96vw;
-    height: 100vh;
-    margin-left: 2vw;
+  .contactWrapper {
+    flex-direction: column;
   }
+
   .flexBoxContainer {
     flex-direction: column;
     padding-top: 2vh;

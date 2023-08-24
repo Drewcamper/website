@@ -1,7 +1,23 @@
 .componentWrapper {
-    height: 80vh;
-    width: 95vw;
-    position: fixed;
-    background-color: cornflowerblue;
-    margin: 15vh 5vh 5vh 5vh;
-  }
+  height: 80vh;
+  width: 95vw;
+  position: fixed;
+  /* background-color: cornflowerblue; */
+  margin: 15vh 5vh 5vh 5vh;
+}
+.leftSideWrapper {
+  height: 100%;
+  width: 25%;
+  /* background-color: red; */
+  align-items: center;
+  justify-content: center;
+}
+.rightSideWrapper {
+  height: 100%;
+  width: 75%;
+}
+
+a {
+  padding: 0px;
+  margin:5px
+}

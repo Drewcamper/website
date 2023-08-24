@@ -63,28 +63,28 @@ const Contacts = forwardRef((props, ref) => {
   const ContactTiles = () => {
     return (
       <div className="contactTileWrapper">
-          <div className="tile">
-            <a
-              href="https://www.linkedin.com/in/andr%C3%A1s-k%C5%91r%C3%B6si-535b27177/"
-              target="_blank">
-              LinkedIn
-            </a>
+        <div className="tile">
+          <a
+            href="https://www.linkedin.com/in/andr%C3%A1s-k%C5%91r%C3%B6si-535b27177/"
+            target="_blank">
+            LinkedIn
+          </a>
+        </div>
+        <div className="tile">
+          <a href="https://github.com/Drewcamper" target="_blank">
+            GitHub
+          </a>
+        </div>
+        <div className="tile">
+          <div className="callMe" onClick={handlePhoneClick}>
+            {phoneNumber}
           </div>
-          <div className="tile">
-            <a href="https://github.com/Drewcamper" target="_blank">
-              GitHub
-            </a>
-          </div>
-          <div className="tile">
-            <div className="callMe" onClick={handlePhoneClick}>
-              {phoneNumber}
-            </div>
-          </div>
-          <div className="tile">
-            <a  className="callMe" href="mailto:korosiandris@gmail.com" target="_blank">
-              korosiandris@gmail.com
-            </a>
-          </div>
+        </div>
+        <div className="tile">
+          <a className="callMe" href="mailto:korosiandris@gmail.com" target="_blank">
+            korosiandris@gmail.com
+          </a>
+        </div>
       </div>
     );
   };
@@ -136,11 +136,11 @@ const Contacts = forwardRef((props, ref) => {
   return (
     <div className="componentWrapper">
       <div className="contactWrapper">
-        <div className="emailWrapper">
-          <SendEmailForm />
-        </div>
         <div className="linkWrapper">
           <ContactTiles />
+        </div>{" "}
+        <div className="emailWrapper">
+          <SendEmailForm />
         </div>
       </div>
     </div>
