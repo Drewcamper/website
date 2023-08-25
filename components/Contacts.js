@@ -1,14 +1,17 @@
-import React, { forwardRef, useState } from "react";
-import emailjs from "emailjs-com";
+import React, { forwardRef, useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 import "../style/components.css";
 import "../style/contacts.css";
 
 import linkedIn from "../images/logos/LI-In-Bug.png";
 import github from "../images/logos/github-mark.png";
-const Contacts = forwardRef((props, ref) => {
+
+const Contacts = forwardRef(() => {
   const phoneNumber = "+36 20 368 8363";
   const initialText = "Send Message";
   const [buttonText, setButtonText] = useState(initialText);
+  const form = useRef();
 
   const handlePhoneClick = () => {
     window.location.href = `tel:${phoneNumber}`;
@@ -17,14 +20,12 @@ const Contacts = forwardRef((props, ref) => {
   function sendEmail(e) {
     e.preventDefault();
 
-    const form = e.currentTarget.form;
     setButtonText("Sending...");
 
-    emailjs.sendForm("service_pohvodv", "template_t8aoj8e", form, "uyknzUYEbp_nj_YhI").then(
+    emailjs.sendForm("service_kp3khf9", "template_t8aoj8e", form.current, "uyknzUYEbp_nj_YhI").then(
       (result) => {
         if (result.text === "OK") {
           console.log(result.text);
-          form.reset();
           setButtonText("Message Sent, thank you");
 
           setTimeout(() => {
@@ -43,30 +44,10 @@ const Contacts = forwardRef((props, ref) => {
     );
   }
 
-  function handleClick(e) {
-    e.preventDefault();
-
-    // Validate inputs
-    const nameInput = e.target.form.elements.name.value.trim();
-    const emailInput = e.target.form.elements.email.value.trim();
-    const subjectInput = e.target.form.elements.subject.value.trim();
-    const messageInput = e.target.form.elements.message.value.trim();
-
-    if (!nameInput || !emailInput || !subjectInput || !messageInput) {
-      alert("Please fill in all the required fields.");
-      return;
-    }
-    if (!emailInput.includes("@")) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-    sendEmail(e);
-  }
-  
   const ContactTiles = () => {
     return (
       <div className="contactTileWrapper">
-         <div className="tile">
+        <div className="tile">
           <a
             className="callMe"
             href="https://www.linkedin.com/in/andr%C3%A1s-k%C5%91r%C3%B6si-535b27177/"
@@ -122,7 +103,7 @@ const Contacts = forwardRef((props, ref) => {
   const SendEmailForm = () => {
     return (
       <>
-        <form onSubmit={sendEmail}>
+        <form ref={form}>
           <div className="field">
             <input type="text" className="form-control" placeholder="Name" name="name" required />
           </div>
@@ -156,7 +137,7 @@ const Contacts = forwardRef((props, ref) => {
               required></textarea>
           </div>
         </form>
-        <div type="submit" className="sendEmailButton" onClick={(e) => handleClick(e)}>
+        <div type="submit" className="sendEmailButton" onClick={(e) => sendEmail(e)}>
           {buttonText}
         </div>
       </>

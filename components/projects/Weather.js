@@ -8,7 +8,9 @@ const WeatherAppContent = () => {
         <div className="upperWrapper">
           <div className="description">
             Weather forecast application utilizing the OpenWeatherMap API to provide real-time
-            weather data for any location. Throughout the development process, I gained valuable
+            weather data for any location.
+            <br />
+            Throughout the development process, I gained valuable
             experience in fetching data from external APIs, implementing error handling for seamless
             user experience, and securing sensitive information by loading environment variables
             from a dotenv file. The application offers current weather conditions and detailed

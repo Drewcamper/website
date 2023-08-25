@@ -41,11 +41,11 @@
   height: 50vh;
 }
 .description {
-  letter-spacing: 0.1em;
+  /* letter-spacing: 0.1em; */
   line-height: 150%;
   font-size: 120%;
   padding: 5%;
-  text-align: justify;
+  /* text-align: justify; */
   overflow: auto;
   display: block;
 }
