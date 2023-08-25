@@ -13,19 +13,19 @@
   align-items: center;
   border: 1px solid transparent;
   cursor: pointer;
- border-color: transparent;border-radius: 2px;
- margin: 3px;
-
+  border-color: transparent;
+  border-radius: 2px;
+  margin: 3px;
+  margin-left: 0%;
 }
 
-.projectTitleContainer:hover{
+.projectTitleContainer:hover {
   border-color: grey;
   border-right: 0px;
 }
 .projectTitleContainer.active {
   border-color: grey;
   border-right: 100%;
-
 }
 
 .projectTitle {
@@ -35,7 +35,6 @@
   overflow-y: visible;
   margin: 3px;
 }
-
 
 .upperWrapper {
   display: flex;
@@ -51,13 +50,12 @@
   display: block;
 }
 .projectImageWrapper {
-  background-color: aliceblue;
+  background-color: white;
 }
 .projectImage {
   height: 50vh;
 }
 .buttonWrapper {
-
   font-size: 120%;
   text-align: center;
   margin-top: 5%;
@@ -67,10 +65,12 @@
 .demoButton {
   border: 1px solid transparent;
   cursor: pointer;
+  padding: 1vh;
 }
 .codeButton {
   border: 1px solid transparent;
   cursor: pointer;
+  padding: 1vh;
 }
 .demoButton:hover {
   border-color: black;
@@ -79,3 +79,32 @@
   border-color: black;
 }
 
+@media (max-width: 1000px) {
+  .projectWrapper {
+    flex-direction: column;
+    height: auto;
+  }
+  .upperWrapper {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+  }
+  .projectTitleContainer {
+    margin-left: 5%;
+  }
+  .description {
+    overflow: hidden;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+  .projectImageWrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .buttonWrapper {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    width: 90%;
+    margin-left: 5%;
+  }
+}

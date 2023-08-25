@@ -3,7 +3,6 @@ import ticTacToe from "../../images/projects/tic-tac-toe.png";
 const TicTacToeAppContent = () => {
   return (
     <div>
-      {" "}
       <div className="upperWrapper">
         <div className="description">
           Time for some fun! The Tic-Tac-Toe Game is a delightful project that allowed me to
@@ -12,10 +11,10 @@ const TicTacToeAppContent = () => {
           balance by ensuring a non-zero-sum outcome. Experience the thrill of this classic game as
           you strive for victory without losing the enjoyment of gameplay. Get ready to put your
           skills to the test and enjoy moments of friendly competition!
-        </div>{" "}
+        </div>
         <div className="projectImageWrapper">
           <img src={ticTacToe} className="projectImage"></img>
-        </div>{" "}
+        </div>
       </div>
       <div className="buttonWrapper">
         <div className="demoButton">

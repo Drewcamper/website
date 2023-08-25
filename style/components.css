@@ -2,13 +2,11 @@
   height: 80vh;
   width: 95vw;
   position: fixed;
-  /* background-color: cornflowerblue; */
-  margin: 15vh 5vh 5vh 5vh;
+  margin: 15vh 2.5vw 5vh 2.5vw;
 }
 .leftSideWrapper {
   height: 100%;
   width: 25%;
-  /* background-color: red; */
   align-items: center;
   justify-content: center;
 }
@@ -20,4 +18,19 @@
 a {
   padding: 0px;
   margin:5px
+}
+@media (max-width: 1000px) {
+  .componentWrapper {
+    position:absolute;
+  }
+  .leftSideWrapper {
+  height: 25%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+  .rightSideWrapper {
+  height: auto;
+  width: 100%;
+}
 }

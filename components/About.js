@@ -8,8 +8,12 @@ function About() {
     <div className="componentWrapper">
       <div className="aboutWrapper">
         <div className="leftSideWrapper">
-          <img src={pp} className="profilePicture" alt="Profile Picture"></img>
-          <div className="name">András Kőrösi</div>
+          <div className="profileWrapper">
+            <div className="profilePictureWrapper">
+              <img src={pp} className="profilePicture" alt="Profile Picture"></img>
+            </div>
+            <div className="name">András Kőrösi</div>
+          </div>
         </div>
         <div className="rightSideWrapper">
           <div className="introductionWrapper">
@@ -22,8 +26,9 @@ function About() {
               experiences. Let's make our ideas into reality!
             </div>
           </div>
-          <div className="toolsWrapper">Tools I have worked with: 
-            <div className="tools">JavaScript</div>
+          <div className="toolsWrapper">
+            Tools I have worked with:
+            <div className="tools firstTool">JavaScript</div>
             <div className="tools">React</div>
             <div className="tools">Firebase</div>
             <div className="tools">GitHub</div>
@@ -32,7 +37,6 @@ function About() {
             <div className="tools">npm</div>
             <div className="tools">.env</div>
           </div>
-          
         </div>
       </div>
     </div>

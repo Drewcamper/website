@@ -2,15 +2,14 @@ import React, { useEffect, useState } from "react";
 import "../style/components.css";
 import "../style/projects.css";
 
+import WebshopAppContent from "./projects/Webshop";
 import TodoAppContent from "./projects/Todo";
 import WeatherAppContent from "./projects/Weather";
 import CalculatorAppContent from "./projects/Calculator";
 import TicTacToeAppContent from "./projects/TicTacToe";
-import { act } from "react-dom/test-utils";
-
 function Projects() {
-  const [content, setContent] = useState(<TodoAppContent />);
-  const [activeProject, setActiveProject] = useState("todo"); // Initialize activeProject with a default value
+  const [content, setContent] = useState(<WebshopAppContent />);
+  const [activeProject, setActiveProject] = useState("webshop"); // Initialize activeProject with a default value
 
   const ProjectTitles = () => {
     const projectItemClass = (item) => {
@@ -24,6 +23,13 @@ function Projects() {
 
     return (
       <>
+        <div
+          className={projectItemClass("webshop")}
+          onClick={() => {
+            openContent(<WebshopAppContent />, "webshop");
+          }}>
+          <div className="projectTitle">WEBSHOP</div>
+        </div>
         <div
           className={projectItemClass("todo")}
           onClick={() => {

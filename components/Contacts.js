@@ -2,14 +2,17 @@ import React, { forwardRef, useState } from "react";
 import emailjs from "emailjs-com";
 import "../style/components.css";
 import "../style/contacts.css";
+
+import linkedIn from "../images/logos/LI-In-Bug.png";
+import github from "../images/logos/github-mark.png";
 const Contacts = forwardRef((props, ref) => {
-  const [phoneNumber, setPhoneNumber] = useState("+36 20 368 8363");
+  const phoneNumber = "+36 20 368 8363";
+  const initialText = "Send Message";
+  const [buttonText, setButtonText] = useState(initialText);
+
   const handlePhoneClick = () => {
     window.location.href = `tel:${phoneNumber}`;
   };
-
-  const initialText = "Send Message";
-  const [buttonText, setButtonText] = useState(initialText);
 
   function sendEmail(e) {
     e.preventDefault();
@@ -59,31 +62,58 @@ const Contacts = forwardRef((props, ref) => {
     }
     sendEmail(e);
   }
-
+  
   const ContactTiles = () => {
     return (
       <div className="contactTileWrapper">
-        <div className="tile">
+         <div className="tile">
           <a
+            className="callMe"
             href="https://www.linkedin.com/in/andr%C3%A1s-k%C5%91r%C3%B6si-535b27177/"
             target="_blank">
             LinkedIn
           </a>
+          <div className="logo">
+            <img className="logoImage" src={linkedIn}></img>
+          </div>
         </div>
         <div className="tile">
-          <a href="https://github.com/Drewcamper" target="_blank">
+          <a className="callMe" href="https://github.com/Drewcamper" target="_blank">
             GitHub
           </a>
+          <div className="logo">
+            <img className="logoImage" src={github}></img>
+          </div>
         </div>
         <div className="tile">
           <div className="callMe" onClick={handlePhoneClick}>
             {phoneNumber}
+          </div>
+          <div className="logo">
+            <div className="old-phone-logo">
+              <div className="phone-body">
+                <div className="speaker"></div>
+              </div>
+              <div className="phone-handle"></div>
+            </div>
           </div>
         </div>
         <div className="tile">
           <a className="callMe" href="mailto:korosiandris@gmail.com" target="_blank">
             korosiandris@gmail.com
           </a>
+          <div className="logo">
+            <div className="email-logo">
+              <div className="envelope">
+                <div className="top"></div>
+                <div className="body">
+                  <div className="line"></div>
+                  <div className="line"></div>
+                  <div className="line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -138,7 +168,7 @@ const Contacts = forwardRef((props, ref) => {
       <div className="contactWrapper">
         <div className="linkWrapper">
           <ContactTiles />
-        </div>{" "}
+        </div>
         <div className="emailWrapper">
           <SendEmailForm />
         </div>

@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "../style/home.css";
 import { WebsiteContext } from "../context/context";
 import Menu from "./Menu";
 import About from "./About";

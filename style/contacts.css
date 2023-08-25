@@ -1,6 +1,5 @@
 .contactWrapper {
   display: flex;
-  height: 100%;
 }
 .emailWrapper {
   width: 60%;
@@ -14,12 +13,8 @@
   padding-top: 5vh;
   padding-left: 5%;
   padding-right: 5%;
-  /* background-color: cornflowerblue; */
 }
-.flexBoxContainer {
-  display: flex;
-  width: 100%;
-}
+
 .field {
   width: 100%;
   margin: 2vh 0 2vh 0px;
@@ -81,29 +76,37 @@
 }
 
 .tile {
-  width: 90%;
+  display: flex;
+  width: 100%;
   margin: 2vh;
   align-items: center;
   background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 10px;
-}
-
-.tile:hover {
-  border-color: black;
 }
 
 .callMe {
+  width: 75%;
+  margin-right: 5%;
   cursor: pointer;
   padding: 2vh;
   display: block;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+.callMe:hover {
+  border-color: black;
+}
+.logo {
+  width: 20%;
+  max-height: 50px;
+}
+.logoImage {
+  width: 5vh;
 }
 
 a {
   text-decoration: none;
   color: black;
   cursor: pointer;
-  padding: 2vh;
   display: block;
 }
 
@@ -115,17 +118,108 @@ a:active {
   color: black;
 }
 
+/* phone logo */
+
+.old-phone-logo {
+  width: 35px;
+  height: 50px;
+  background-color: #666;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.phone-body {
+  background-color: #aaa;
+  border-radius: 5px 5px 0 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+  position: relative;
+}
+
+.speaker {
+  width: 10px;
+  height: 2px;
+  background-color: #222;
+  border-radius: 1px;
+}
+
+.phone-handle {
+  width: 10px;
+  height: 2px;
+  background-color: #444;
+  border-radius: 1px;
+  margin: 0 auto;
+}
+
+/* email logo */
+
+.email-logo {
+  width: 60px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.envelope {
+  width: 48px;
+  height: 24px;
+  background-color: #fff;
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+.top {
+  width: 100%;
+  height: 6px;
+  background-color: #000;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+}
+
+.line {
+  width: 60%;
+  height: 1px;
+  background-color: #000;
+  margin: 1px 0;
+}
+
 @media (max-width: 1000px) {
   .contactWrapper {
     flex-direction: column;
   }
-
-  .flexBoxContainer {
-    flex-direction: column;
-    padding-top: 2vh;
+  .linkWrapper {
+    width: 90%;
+    height: auto;
+    padding-left: 5%;
   }
-  .form-control {
-    padding-left: 2%;
+  .contactTileWrapper {
+    height: auto;
+    width: 100%;
+  }
+  .tile {
+    width: 100%;
+  }
+
+  .emailWrapper {
+    width: 90%;
+    padding: 5vh 5%;
   }
 
   .field {
