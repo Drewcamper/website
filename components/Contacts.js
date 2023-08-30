@@ -55,7 +55,7 @@ const Contacts = forwardRef(() => {
             LinkedIn
           </a>
           <div className="logo">
-            <img className="logoImage" src={linkedIn}></img>
+            <img className="logoImage" src={linkedIn} loading="lazy"></img>
           </div>
         </div>
         <div className="tile">
@@ -63,7 +63,7 @@ const Contacts = forwardRef(() => {
             GitHub
           </a>
           <div className="logo">
-            <img className="logoImage" src={github}></img>
+            <img className="logoImage" src={github} loading="lazy"></img>
           </div>
         </div>
         <div className="tile">

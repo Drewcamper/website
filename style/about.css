@@ -25,7 +25,6 @@
 .introductionWrapper {
   width: 100%;
   height: 50vh;
-
 }
 .introduction {
   margin: 0vh 10% 5vh 10%;
@@ -46,14 +45,14 @@
 }
 
 .tools {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
+  white-space: nowrap;
   border: 1px solid transparent;
   border-radius: 5px;
   margin: 5px;
   flex: 1;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .firstTool {
@@ -127,7 +126,6 @@
   }
 }
 @media (max-width: 500px) {
- 
   .name {
     margin-left: 15%;
   }
@@ -137,6 +135,6 @@
     margin-left: 0;
   }
   .introductionWrapper {
-    margin-bottom:50vh;
+    margin-bottom: 50vh;
   }
 }

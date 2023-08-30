@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import ticTacToe from "../../images/projects/tic-tac-toe.png";
+import ticTacToeSmall from "../../images/smallSize/projects/tic-tac-toe.png";
 const TicTacToeAppContent = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
   return (
     <div>
       <div className="upperWrapper">
@@ -13,7 +19,15 @@ const TicTacToeAppContent = () => {
           skills to the test and enjoy moments of friendly competition!
         </div>
         <div className="projectImageWrapper">
-          <img src={ticTacToe} className="projectImage"></img>
+          {isLoading ? (
+            <img
+              src={ticTacToeSmall}
+              className="projectImage"
+              loading="lazy"
+              onLoad={handleImageLoad}></img>
+          ) : (
+            <img src={ticTacToe} className="projectImage" loading="lazy"></img>
+          )}
         </div>
       </div>
       <div className="buttonWrapper">

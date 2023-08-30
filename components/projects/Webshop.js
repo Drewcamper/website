@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import webshop from "../../images/projects/webshop.png";
+import webshopSmall from "../../images/smallSize/projects/webshop.png";
 function WebshopAppContent() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
   return (
     <div>
       <div className="upperWrapper">
@@ -12,7 +18,16 @@ function WebshopAppContent() {
           development.
         </div>
         <div className="projectImageWrapper">
-          <img alt="index image" src={webshop} className="projectImage"></img>
+          {isLoading ? (
+            <img
+              alt="index image"
+              src={webshopSmall}
+              className="projectImage"
+              loading="lazy"
+              onLoad={handleImageLoad}></img>
+          ) : (
+            <img alt="index image" src={webshop} className="projectImage" loading="lazy"></img>
+          )}
         </div>
       </div>
       <div className="buttonWrapper">

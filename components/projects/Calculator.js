@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import calculator from "../../images/projects/calculatorbg.png";
+import calculatorSmall from "../../images/smallSize/projects/calculatorbg.png";
 
 const CalculatorAppContent = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
+
   return (
     <div>
       <div className="upperWrapper">
@@ -12,7 +19,15 @@ const CalculatorAppContent = () => {
           for all your everyday mathematical needs.
         </div>
         <div className="projectImageWrapper">
-          <img src={calculator} className="projectImage"></img>
+          {isLoading ? (
+            <img
+              src={calculatorSmall}
+              className="projectImage"
+              loading="lazy"
+              onLoad={handleImageLoad()}></img>
+          ) : (
+            <img src={calculator} className="projectImage" loading="lazy"></img>
+          )}
         </div>
       </div>
       <div className="buttonWrapper">
