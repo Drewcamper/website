@@ -46,10 +46,13 @@ function About() {
           <div className="toolsWrapper">
             Tools I have worked with:
             <div className="tools firstTool">JavaScript</div>
+            <div className="tools">HTML</div>
+            <div className="tools">CSS</div>
             <div className="tools">React</div>
             <div className="tools">Node</div>
             <div className="tools">Firebase</div>
-            <div className="tools">GitHub</div> <div className="tools">Jest</div>
+            <div className="tools">GitHub</div>
+            <div className="tools">Jest</div>
             <div className="tools">Stripe</div>
             <div className="tools">Mongo DB</div>
             <div className="tools">SQL</div>
